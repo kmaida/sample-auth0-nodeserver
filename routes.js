@@ -31,19 +31,6 @@ module.exports = function(app) {
     }
   }
 
-  // Set up dogs JSON data for API
-  const data = require('./data.json');
-  const getDogsBasic = () => {
-    const dogsBasicArr = dogs.map(dog => {
-      return {
-        rank: dog.rank,
-        breed: dog.breed,
-        image: dog.image
-      }
-    });
-    return dogsBasicArr;
-  }
-
   // API works (public)
   app.get('/api', (req, res) => {
     res.send('API works!');

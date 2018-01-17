@@ -86,7 +86,7 @@ Set up a pattern for the admin user to be specifically identified. The example a
 
 Make sure you also add the app metadata containing your roles to the `accessToken` as well as the `idToken`. The access token is how we'll verify that the user has the appropriate role on our server when they request resources.
 
-The `namespace` identifier in the `addRolesToUser()` function can be any _non-Auth0_ HTTP or HTTPS URL and does not have to point to an actual resource. Auth0 enforces [this recommendation from OIDC regarding additional claims](https://openid.net/specs/openid-connect-core-1_0.html#AdditionalClaims) and will _silently exclude_ any claims that do not have a namespace. You can read more about [implementing custom claims with Auth0 here](https://auth0.com/docs/scopes/current#custom-claims).
+The `namespace` identifier in the `addRolesToUser()` callback function can be any _non-Auth0_ HTTP or HTTPS URL and does not have to point to an actual resource. Auth0 enforces [this recommendation from OIDC regarding additional claims](https://openid.net/specs/openid-connect-core-1_0.html#AdditionalClaims) and will _silently exclude_ any claims that do not have a namespace. You can read more about [implementing custom claims with Auth0 here](https://auth0.com/docs/scopes/current#custom-claims).
 
 ### Add Auth0 Configuration
 
@@ -105,3 +105,7 @@ To start the server, run the following command from the root of the folder conta
 ```bash
 $ node server
 ```
+
+## License
+
+[MIT](LICENSE) 2018
