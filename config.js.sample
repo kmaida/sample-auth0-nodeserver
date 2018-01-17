@@ -1,0 +1,5 @@
+module.exports = {
+  domain: '{Auth0_Domain}', // e.g., your-account-name.auth0.com
+  audience: '{Auth0_API_Audience}', // e.g., http://localhost:3001/api/
+  namespace: '{Auth0_Rules_Roles_Namespace}' // e.g., https://example.com/roles
+};
