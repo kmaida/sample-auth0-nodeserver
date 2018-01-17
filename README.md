@@ -92,11 +92,11 @@ The `namespace` identifier in the `addRolesToUser()` function can be any _non-Au
 
 Change the filename of `config.js.sample` to `config.js` to activate it.
 
-Next, add your Auth0 configuration to the `config.js` file:
+Add your Auth0 configuration to the `config.js` file:
 
-* **domain**`: your Auth0 tenant domain, e.g., `[you].auth0.com` (format may differ by region)
+* **domain**: your Auth0 tenant domain, e.g., `[you].auth0.com` (format may differ by region); you can find your domain by viewing an [Auth0 client](https://manage.auth0.com/#/clients)'s settings
 * **audience**: the Audience Identifier of the API you set up in Auth0, e.g., `http://localhost:3001/api/` (must be exact match!)
-* **namespace**: the `namespace` identifier you specified in the "Set roles to a user" rule you created above, e.g., `http://myapp.com/roles`
+* **namespace**: the `namespace` identifier you specified in the "Set roles to a user" rule you created above, e.g., `https://example.com/roles`
 
 ## Serve
 
