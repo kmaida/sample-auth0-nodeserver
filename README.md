@@ -11,7 +11,7 @@ header: 'Bearer jwtAccessToken-goes-here'
 ## Dependencies
 
 * [Node.js](https://nodejs.org)
-* Package manager: suggest [npm](https://npmjs.com) (which comes with Node) or [Yarn](https://yarnpkg.com)
+* A package manager: suggest [npm](https://npmjs.com) (which comes with Node) or [Yarn](https://yarnpkg.com)
 * [Free Auth0 account](https://auth0.com/signup)
 
 ## Requirements and Setup
