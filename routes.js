@@ -4,8 +4,8 @@ const jwks = require('jwks-rsa');
 // Config
 const config = require('./config');
 // Data
-const data = require('./data.json');
-const adminData = require('./adminData.json');
+const dinosaurs = require('./dinosaurs.json');
+const dragons = require('./dragons.json');
 
 module.exports = function(app) {
   // Auth0 athentication middleware
@@ -36,13 +36,13 @@ module.exports = function(app) {
     res.send('API works!');
   });
 
-  // GET protected data
-  app.get('/api/data', jwtCheck, (req, res) => {
-    res.send(data);
+  // GET protected dinosaurs data
+  app.get('/api/dinosaurs', jwtCheck, (req, res) => {
+    res.send(dinosaurs);
   });
 
-  // GET admin data
-  app.get('/api/admin', jwtCheck, adminCheck, (req, res) => {
-    res.send(adminData);
+  // GET protected dragons data, accessible only to admins
+  app.get('/api/dragons', jwtCheck, adminCheck, (req, res) => {
+    res.send(dragons);
   });
 };
