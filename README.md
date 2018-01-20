@@ -8,13 +8,15 @@ It is important to note that any front-end client using this server must also au
 header: 'Bearer jwtAccessToken-goes-here'
 ```
 
+This server is intended to be used in conjunction with the 
+
 ## Dependencies
 
 * [Node.js](https://nodejs.org)
 * A package manager: suggest [npm](https://npmjs.com) (which comes with Node) or [Yarn](https://yarnpkg.com)
-* [Free Auth0 account](https://auth0.com/signup)
+* A free [Auth0 account](https://auth0.com/signup)
 
-## Requirements and Setup
+## Setup
 
 Clone the repo:
 
@@ -30,7 +32,7 @@ $ npm install
 # or yarn install
 ```
 
-### Auth0 API
+## Auth0 API
 
 Log into your [Auth0 Dashboard](https://manage.auth0.com) and create a new [API](https://manage.auth0.com/#/apis) with the following settings:
 
@@ -40,7 +42,7 @@ Log into your [Auth0 Dashboard](https://manage.auth0.com) and create a new [API]
 
 ![New Auth0 API](https://cdn.auth0.com/blog/ngatl/new-api.png)
 
-### Auth0 User Roles Rule
+## Auth0 User Roles Rule
 
 Log into your [Auth0 Dashboard](https://manage.auth0.com) and [create a new Auth0 rule](https://manage.auth0.com/#/rules/create) using the `Set roles to a user` access control rule template:
 
@@ -88,7 +90,7 @@ Make sure you also add the app metadata containing your roles to the `accessToke
 
 The `namespace` identifier in the `addRolesToUser()` callback function can be any _non-Auth0_ HTTP or HTTPS URL and does not have to point to an actual resource. Auth0 enforces [this recommendation from OIDC regarding additional claims](https://openid.net/specs/openid-connect-core-1_0.html#AdditionalClaims) and will _silently exclude_ any claims that do not have a namespace. You can read more about [implementing custom claims with Auth0 here](https://auth0.com/docs/scopes/current#custom-claims).
 
-### Add Auth0 Configuration
+## Add Auth0 Configuration
 
 Change the filename of `config.js.sample` to `config.js` to activate it.
 
@@ -104,6 +106,13 @@ To start the server, run the following command from the root of the folder conta
 
 ```bash
 $ node server
+```
+
+Alternatively, you could install [nodemon](https://nodemon.io/), which monitors the server for changes and restarts it automatically:
+
+```bash
+$ npm install -g nodemon
+$ nodemon server
 ```
 
 ## License
