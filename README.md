@@ -8,7 +8,7 @@ It is important to note that any front-end client using this server must also au
 header: 'Bearer jwtAccessToken-goes-here'
 ```
 
-This server is intended to be used in conjunction with the 
+This server is intended to be used in conjunction with the [Auth0 Angular Workshop](https://kmaida.gitbooks.io/auth0-angular-workshop/content/) and [sample-auth0-angular](https://github.com/kmaida/sample-auth0-angular) repository.
 
 ## Dependencies
 
@@ -117,4 +117,4 @@ $ nodemon server
 
 ## License
 
-[MIT](LICENSE) 2018
+[MIT](LICENSE) © Kim Maida 2018
